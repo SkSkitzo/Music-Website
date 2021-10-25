@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SK Music</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+<div class="container">
+  <<div class="navbar">
+    <img class="logo" src="img/logo.png" alt="">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">SPECIFICATIONS</a></li>
+      <li><a href="#">PRODUCTS</a></li>
+      <li><a href="#">CONNECT</a></li>
+    </ul>
+    <div class="content">
+      <div class="left">
+        <h1>THE<br>REAL<br>SOUND</h1>
+      </div>
+      <div class="right">
+<p>Click Here To Listen</p>
+<img src="img/play.png" id="icon" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<audio id="mysong">
+  <source src=" mysong.mp3" type="audio/mp3">
+
+
+</audio>
+<script>
+  var mysong = document.getElementById("mysong");
+  var icon = document.getElementById("icon");
+  icon.onclick = function () {
+    if(mysong.paused)
+    {
+      mysong.play();
+      icon.src="img/pause.png";
+    }
+    else {
+      mysong.pause();
+      icon.src="img/play.png";
+    }
+  }
+
+
+</script>
+  </body>
+</html>
